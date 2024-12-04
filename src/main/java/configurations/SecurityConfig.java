@@ -27,7 +27,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 	    @Bean
 	    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 	        http
-	            .csrf(csrf -> csrf.disable()) // Disable CSRF protection for API
+	            .csrf(csrf -> csrf.disable()) 
 	            .authorizeRequests(auth -> auth
 	                .requestMatchers("/api/User/register", "/api/auth/login").permitAll() // Allow registration and login without authentication
 	                .anyRequest().authenticated() // Require authentication for all other endpoints
